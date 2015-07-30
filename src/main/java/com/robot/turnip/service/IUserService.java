@@ -3,6 +3,8 @@
  */
 package com.robot.turnip.service;
 
+import java.util.List;
+
 import com.robot.turnip.domain.User;
 
 /**
@@ -10,6 +12,16 @@ import com.robot.turnip.domain.User;
  *
  */
 public interface IUserService {
-	public User getUserById(int userId);
+//	public User getUserById(String userId);
+	
+	int deleteByPrimaryKey(String id);
+
+    int insert(User record);
+
+    User selectByPrimaryKey(String id);
+
+    List<User> selectAll();
+
+    int updateByPrimaryKey(User record);
 }
 

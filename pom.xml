@@ -8,8 +8,15 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../turnip-parent</relativePath>
 	</parent>
-	
+
 	<artifactId>turnip-api</artifactId>
 	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
 
 </project>

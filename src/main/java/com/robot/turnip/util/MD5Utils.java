@@ -17,13 +17,19 @@ import java.security.NoSuchAlgorithmException;
  * @since JDK 1.6
  */
 public class MD5Utils {
-	public static String encrypt(String input) throws NoSuchAlgorithmException{
+	public static String encrypt(String input){
 		if(input == null){
 			return null;
 		}
 		String md5 = null;
 		//Create MessageDigest object for MD5
-        MessageDigest digest = MessageDigest.getInstance("MD5");
+        MessageDigest digest = null;
+		try {
+			digest = MessageDigest.getInstance("MD5");
+		} catch (NoSuchAlgorithmException e) {
+			e.printStackTrace();
+			throw new IllegalArgumentException("无法进行MD5加密", e);
+		}
         //Update input string in message digest
         digest.update(input.getBytes(), 0, input.length());
         //Converts message digest value in base 16 (hex) 

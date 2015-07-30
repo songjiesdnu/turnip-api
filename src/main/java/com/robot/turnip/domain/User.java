@@ -1,28 +1,40 @@
 package com.robot.turnip.domain;
 
 public class User {
-    private Integer id;
+    private String id;
 
-    private String userName;
+    private String name;
 
     private String password;
 
-    private Integer age;
+    private String salt;
 
-    public Integer getId() {
+    private String realName;
+
+    private String nickName;
+
+    private String email;
+
+    private String mobileNo;
+
+    private String registerTime;
+
+    private String status;
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -33,11 +45,59 @@ public class User {
         this.password = password;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getSalt() {
+        return salt;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMobileNo() {
+        return mobileNo;
+    }
+
+    public void setMobileNo(String mobileNo) {
+        this.mobileNo = mobileNo;
+    }
+
+    public String getRegisterTime() {
+        return registerTime;
+    }
+
+    public void setRegisterTime(String registerTime) {
+        this.registerTime = registerTime;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
