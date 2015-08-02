@@ -1,18 +1,20 @@
 /**
- * 
+ * Date:2015年7月30日下午11:20:52
+ * Copyright (c) 2015, songjiesdnu@163.com All Rights Reserved.
  */
 package com.robot.turnip.service;
 
 import java.util.List;
 
+import org.apache.ibatis.session.RowBounds;
+
 import com.robot.turnip.domain.User;
 
 /**
+ * 
  * @author songjie
- *
  */
 public interface IUserService {
-//	public User getUserById(String userId);
 	
 	int deleteByPrimaryKey(String id);
 
@@ -20,8 +22,7 @@ public interface IUserService {
 
     User selectByPrimaryKey(String id);
 
-    List<User> selectAll();
-
     int updateByPrimaryKey(User record);
+    
+    List<User> selectByPage(RowBounds rb);
 }
-
